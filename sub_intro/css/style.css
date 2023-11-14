@@ -3,12 +3,10 @@
 }
 
 header {
-    position: fixed;
-    top: 0;
-    background-color: rgba(240, 255, 255, 0.7);
+    background-color: rgba(225, 232, 234, 0.82);
     width: 100%;
     height: 100px;
-    z-index: 9999;
+    transition: 0.2s;
 }
 
 .header-wrap {
@@ -55,7 +53,7 @@ nav {
     width: 700px;
     height: 55px;
     /* display: flex; */
-    
+
 }
 
 .nav-main {
@@ -68,7 +66,7 @@ nav {
     font-size: 20px;
     line-height: 55px;
     text-align: center;
-    
+
 }
 
 .main-menu:hover {
@@ -85,7 +83,7 @@ nav {
 .sub-menu {
     visibility: hidden;
     z-index: 9999;
-    
+
 }
 
 .sub-menu li {
@@ -113,83 +111,111 @@ nav {
 }
 
 
-/*sub-main 시작*/
-.sub-intro-container{
-    background-image: linear-gradient(rgba(240, 255, 255, 0.3), rgba(240, 255, 255, 0.4)), url('../images/펜션sub_intro1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 100px;
+/* main 시작 */
+.sub-title-wrap {
+    width: 100%;
     height: 300px;
-}
-.sub-intro-content {
-    width: 50%;
-    padding-top: 150px;
-    /* margin: 0 auto; */
-    margin-left: 150px;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(rgba(84, 84, 84, 0.5), rgba(84, 84, 84, 0.5)), url('../images/펜션sub_intro1.png');    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Gothic A1', sans-serif;
 }
 
-.sub-intro-title {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: white;
+.sub-title-bg {
+    max-width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
-h1::after {
-    content: '';
+
+.sub-title {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.sub-title-txt {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.line {
+    margin: 5px 0 12px 0;
     width: 50px;
     height: 2px;
     background-color: #fff;
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 10px;
-} 
-  .sub-intro-title-p {
-    font-size: 20px;
-    text-align: justify;
-    line-height: 1.3;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 30px;
-  }
+}
 
-  .sub-intro-item {
+/* main 끝 */
+
+/* section 시작 */
+.sub-location-nav {
+    width: 15%;
+}
+
+.sub-location-nav h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.sub-location-nav li {
+    margin-bottom: 5px;
+}
+
+.sub-location-nav li a:hover {
+    color: #ed7d31
+}
+
+.intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 150px 0;
     display: flex;
     justify-content: space-between;
-    margin-top: 150px;
-    margin-bottom: 150px;
-  }
-  .sub-intro-item li {
-    width: 600px;
+}
+
+.intro-content-wrap {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-content-wrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-item1 {
+    width: 50%;
     height: 350px;
     border-radius: 50px;
-    margin-left: 135px;
-    margin-right: 135px;
-    
-  }
-  .sub-intro-item1-wrap{
-    width: 650px;
-  }
-
-  .sub-intro-item1 {
     background: url(../images/펜션2.jpg) 90% 100% no-repeat;
     background-size: cover;
     background-position: center;
-    
-  }
-  .sub-intro-item2 {
-    line-height: 30px;
-    margin-right: -5px;
-  }
-  .sub-intro-topic {
+}
+
+.intro-item2 {
+    width: 40%;
+}
+
+.intro-subject {
     font-weight: bold;
     font-size: 20px;
     word-spacing: 3px;
-    padding: 30px;
-    margin-left: -30px;
-  }
+}
 
-/* sub-main 끝 */
+.intro-text {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+/* section 끝 */
 
 /* footer 시작 */
 
@@ -198,7 +224,6 @@ footer {
     width: 100%;
     background-color: #9EA2A9;
     font-size: 12px;
-    
 }
 
 .footer-wrap {
@@ -242,4 +267,26 @@ footer {
 .footer-sns a:hover {
     color: tomato;
 }
+
 /* footer 끝 */
+
+
+/* Anchor 시작 */
+
+.anchor {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(139, 131, 131);
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 0.3s;
+    visibility: hidden;
+}
